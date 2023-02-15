@@ -88,7 +88,7 @@ export default function Header(props: HeaderProps) {
             {isMenuOpen ? (
               <HiXMark style={{ fontSize: 22 }} onClick={handleClick} />
             ) : (
-              <FaBars onClick={handleClick} />
+              <FaBars style={{ height: "100%" }} onClick={handleClick} />
             )}
           </MenuBar>
           <Link style={{ display: "flex", alignItems: "center" }} to="/">
@@ -420,7 +420,7 @@ const MenuContainer = styled.div`
   background-color: white;
   padding-bottom: 50px;
   width: 100%;
-  z-index: 10;
+  z-index: 20;
   border-radius: 0px 0px 8px 8px;
 `;
 
