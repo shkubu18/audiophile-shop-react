@@ -216,6 +216,7 @@ export const Background = styled.div`
   background: #00000080;
   position: absolute;
   z-index: 10;
+  top: 75px;
 `;
 
 export const GlobalStyles = createGlobalStyle`
