@@ -521,7 +521,7 @@ export default function Checkout(props: CheckoutProps) {
         )}
       </Container>
       {validations ? (
-        <Background style={{ height: "97%" }}>
+        <Background style={{ top: window.innerWidth > 1100 ? 91 : 75 }}>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <OrderConfirmation>
               <div>
@@ -616,7 +616,7 @@ const GoBackContainer = styled.div`
   @media (min-width: 1100px) {
     width: 1100px;
     margin: auto;
-    margin-top: 50px;
+    padding-top: 50px;
   }
 `;
 
@@ -861,7 +861,6 @@ const ProductInfo = styled.div`
 `;
 
 const Container = styled.div`
-  min-height: calc(100vh - 76px + 602px);
   margin-inline: 25px;
   @media (min-width: 1100px) {
     width: 1100px;
