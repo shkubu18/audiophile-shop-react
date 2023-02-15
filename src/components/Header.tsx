@@ -367,6 +367,7 @@ const Cart = styled.div`
   position: absolute;
   z-index: 99;
   width: 330px;
+  top: 100px;
   background-color: white;
   @media (max-width: 340px) {
     width: 300px;
@@ -384,7 +385,6 @@ const Cart = styled.div`
 const CartContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 15px;
   @media (min-width: 765px) {
     justify-content: flex-end;
     margin-right: 50px;
@@ -419,11 +419,10 @@ const CartIconContainer = styled.div`
 
 const MenuContainer = styled.div`
   position: absolute;
-  top: 10;
   background-color: white;
   padding-bottom: 50px;
   width: 100%;
-  z-index: 20;
+  z-index: 100;
   border-radius: 0px 0px 8px 8px;
 `;
 
@@ -432,17 +431,19 @@ const HeaderContainer = styled.div`
   padding: 25px;
   display: flex;
   justify-content: center;
+  border-bottom: 1px solid #ffffff2b;
   background-color: #191919;
-  @media (min-width: 1100px) {
+  @media (min-width: 1120px) {
     margin-bottom: -2px;
     padding: 0;
     padding-top: 25px;
+    border: none;
   }
   header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    @media (min-width: 1100px) {
+    @media (min-width: 1120px) {
       max-width: 1100px !important;
       padding-bottom: 30px;
       padding-top: 10px;
