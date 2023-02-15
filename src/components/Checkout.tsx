@@ -727,6 +727,9 @@ const WarningMessage = styled.div`
 
 const PaymentMethodContainer = styled.div`
   width: 50%;
+  @media (max-width: 765px) {
+    width: 100%;
+  }
 `;
 
 const PaymentMethod = styled.div`
