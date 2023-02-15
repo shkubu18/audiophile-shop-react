@@ -43,6 +43,7 @@ export const productsDetailInfo: ProductDetailInfo[] | any = [
   {
     xx99mark2: [
       {
+        id: 1,
         hint: "NEW PRODUCT",
         name: "XX99 MARK ||",
         productType: "HEADPHONES",
@@ -74,6 +75,7 @@ export const productsDetailInfo: ProductDetailInfo[] | any = [
     ],
     xx99mark1: [
       {
+        id: 2,
         name: "XX99 MARK |",
         productType: "HEADPHONES",
         description:
@@ -102,6 +104,7 @@ export const productsDetailInfo: ProductDetailInfo[] | any = [
     ],
     xx59: [
       {
+        id: 3,
         name: "XX59",
         productType: "HEADPHONES",
         description:
@@ -130,6 +133,7 @@ export const productsDetailInfo: ProductDetailInfo[] | any = [
     ],
     zx9: [
       {
+        id: 4,
         hint: "NEW PRODUCT",
         name: "ZX9",
         productType: "SPEAKER",
@@ -161,6 +165,7 @@ export const productsDetailInfo: ProductDetailInfo[] | any = [
     ],
     zx7: [
       {
+        id: 5,
         name: "ZX7",
         productType: "SPEAKER",
         description:
@@ -191,6 +196,7 @@ export const productsDetailInfo: ProductDetailInfo[] | any = [
     ],
     yx1: [
       {
+        id: 6,
         hint: "NEW PRODUCT",
         name: "YX1 WIRELESS",
         productType: "EARPHONES",
