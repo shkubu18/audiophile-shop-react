@@ -86,7 +86,10 @@ export default function Header(props: HeaderProps) {
         <header>
           <MenuBar>
             {isMenuOpen ? (
-              <HiXMark style={{ fontSize: 22 }} onClick={handleClick} />
+              <HiXMark
+                style={{ fontSize: 22, height: "100%" }}
+                onClick={handleClick}
+              />
             ) : (
               <FaBars style={{ height: "100%" }} onClick={handleClick} />
             )}
@@ -363,10 +366,10 @@ const Cart = styled.div`
   padding: 25px;
   position: absolute;
   z-index: 99;
-  width: 320px;
+  width: 330px;
   background-color: white;
-  @media screen and (max-width: 370px) {
-    width: 280px;
+  @media (max-width: 340px) {
+    width: 300px;
     padding-inline: 18px;
   }
   @media (min-width: 765px) {
