@@ -10,7 +10,6 @@ import { HeaderProps } from "../interfaces/HeaderProps";
 import { NavLink } from "react-router-dom";
 import { CartProductData } from "../interfaces/Product";
 import CartContainer from "./CartContainer";
-import { Background } from "../App";
 
 export default function Header(props: HeaderProps) {
   const [showCart, setShowCart] = useState<boolean>(false);
@@ -139,9 +138,18 @@ export default function Header(props: HeaderProps) {
         </MenuContainer>
       ) : null}
       {showCart ? <Background onClick={hideBackground} /> : null}
+      {isMenuOpen ? <Background /> : null}
     </>
   );
 }
+
+export const Background = styled.div`
+  height: calc(100% - 91px);
+  width: 100%;
+  background: #00000080;
+  position: absolute;
+  z-index: 10;
+`;
 
 const MenuBar = styled.div`
   width: 20px;

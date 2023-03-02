@@ -205,18 +205,9 @@ export default function App() {
         <Route path="*" element={<ErrorHint />} />
       </Routes>
       <Footer />
-      {isMenuOpen ? <Background /> : null}
     </BrowserRouter>
   );
 }
-
-export const Background = styled.div`
-  height: calc(100% - 91px);
-  width: 100%;
-  background: #00000080;
-  position: absolute;
-  z-index: 10;
-`;
 
 export const GlobalStyles = createGlobalStyle`
   * {
