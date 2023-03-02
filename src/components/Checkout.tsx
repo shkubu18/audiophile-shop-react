@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
-import { Price, ProductName } from "./Header";
+import { Price, ProductName } from "./CartContainer";
 import { Button } from "./Headphones";
 import { useForm } from "react-hook-form";
 import { SubmitHandler } from "react-hook-form/dist/types";
