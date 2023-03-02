@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Headphones from "./components/Headphones";
