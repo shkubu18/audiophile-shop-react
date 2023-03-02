@@ -2,15 +2,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { Button } from "./Headphones";
 import { CartProductData } from "../interfaces/Product";
-
-interface CartContainerProps {
-  cartProducts: CartProductData | any;
-  setCartProducts: React.Dispatch<any>;
-  hideBackground: () => void;
-  totalPrice: number | null;
-  showCart: boolean;
-  setShowCart: React.Dispatch<React.SetStateAction<boolean>>;
-}
+import { CartContainerProps } from "../interfaces/CartContainerProps";
 
 export default function CartContainer(props: CartContainerProps) {
   const { cartProducts, setCartProducts, totalPrice, hideBackground } = props;
