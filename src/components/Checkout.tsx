@@ -7,7 +7,7 @@ import { SubmitHandler } from "react-hook-form/dist/types";
 import { Inputs } from "../interfaces/CheckoutInputs";
 import CheckoutImg from "../assets/checkout/icon-cash-on-delivery.svg";
 import OrderConfirmationImg from "../assets/checkout/icon-order-confirmation.svg";
-import { Background } from "../App";
+import { Background } from "./Header";
 import { Link } from "react-router-dom";
 import { CheckoutProps } from "../interfaces/CheckoutProps";
 
