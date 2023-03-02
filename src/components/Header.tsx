@@ -67,7 +67,7 @@ export default function Header(props: HeaderProps) {
           <MenuBar>
             {isMenuOpen ? (
               <HiXMark
-                style={{ fontSize: 22, height: "100%" }}
+                style={{ height: "100%", width: "100%" }}
                 onClick={handleClick}
               />
             ) : (
@@ -144,6 +144,8 @@ export default function Header(props: HeaderProps) {
 }
 
 const MenuBar = styled.div`
+  width: 20px;
+  height: 22px;
   @media (min-width: 1100px) {
     display: none;
   }
