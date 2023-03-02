@@ -9,7 +9,7 @@ import ViewProducts from "./ViewProducts";
 import { HeaderProps } from "../interfaces/HeaderProps";
 import { Button } from "./Headphones";
 import { Background } from "../App";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { CartProductData } from "../interfaces/Product";
 
 export default function Header(props: HeaderProps) {
@@ -80,6 +80,10 @@ export default function Header(props: HeaderProps) {
     setShowCart(!showCart);
   };
 
+  let activeStyle = {
+    color: "#d87d4a",
+  };
+
   return (
     <>
       <HeaderContainer>
@@ -94,46 +98,34 @@ export default function Header(props: HeaderProps) {
               <FaBars style={{ height: "100%" }} onClick={handleClick} />
             )}
           </MenuBar>
-          <Link style={{ display: "flex", alignItems: "center" }} to="/">
+          <NavLink style={{ display: "flex", alignItems: "center" }} to="/">
             <img src={Logo} alt="Logo" />
-          </Link>
+          </NavLink>
           <Navbar>
-            <Link
+            <NavLink
               to="/"
-              style={{
-                marginRight: 30,
-                color: "white",
-                textDecoration: "none",
-              }}
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
               HOME
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/headphones"
-              style={{
-                marginRight: 30,
-                color: "white",
-                textDecoration: "none",
-              }}
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
               HEADPHONES
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/speakers"
-              style={{
-                marginRight: 30,
-                color: "white",
-                textDecoration: "none",
-              }}
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
               SPEAKERS
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/earphones"
-              style={{ color: "white", textDecoration: "none" }}
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
               EARPHONES
-            </Link>
+            </NavLink>
           </Navbar>
           <CartIconContainer onClick={handleShowCart}>
             <img src={CartIcon} alt="cartIcon" />
@@ -217,13 +209,13 @@ export default function Header(props: HeaderProps) {
                   justifyContent: "center",
                 }}
               >
-                <Link
+                <NavLink
                   onClick={hideBackground}
                   style={{ width: "100%" }}
                   to="/checkout"
                 >
                   <Button style={{ width: "100%" }}>CHECKOUT</Button>
-                </Link>
+                </NavLink>
               </div>
             </div>
           </Cart>
@@ -279,10 +271,14 @@ const Navbar = styled.nav`
   display: none;
   @media (min-width: 1100px) {
     display: flex;
+    justify-content: space-between;
+    width: 440px;
     a {
       font-weight: 500;
       font-size: 13px;
       letter-spacing: 2px;
+      color: white;
+      text-decoration: none;
       transition: all 0.5s ease;
       &:hover {
         color: #d87d4a !important;
