@@ -248,6 +248,7 @@ const HeaderContainer = styled.div`
   header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     @media (min-width: 1120px) {
       max-width: 1100px !important;
