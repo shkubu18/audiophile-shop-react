@@ -1,5 +1,4 @@
 import { useState } from "react";
-import styled, { createGlobalStyle } from "styled-components";
 import { useForm } from "react-hook-form";
 import { SubmitHandler } from "react-hook-form/dist/types";
 import { Inputs } from "../../types/CheckoutInputs";
@@ -8,6 +7,28 @@ import { Background } from "../_Header/Header";
 import { CheckoutProps } from "../../types/CheckoutProps";
 import Order from "./Order";
 import Summary from "./Summary";
+import { GoBackContainer } from "../Product";
+import { Container } from "../ViewProducts";
+import {
+  Input,
+  Error,
+  BillingDetails,
+  BillingDetailsContainer,
+  CheckoutContainer,
+  Label,
+  MainContainer,
+  ShippingInfo,
+  ShippingInfoContainer,
+  PaymentMethod,
+  PaymentDetailsContainer,
+  PaymentDetails,
+  PaymentMethodContainer,
+  RadioInput,
+  PaymentDetailsLabel,
+  EMoneyContainer,
+  CashOnDelivery,
+  GlobalStyle,
+} from "./checkout_styles";
 
 export default function Checkout(props: CheckoutProps) {
   const [isClicked, setIsCliked] = useState<boolean>(false);
@@ -453,189 +474,3 @@ export default function Checkout(props: CheckoutProps) {
     </MainContainer>
   );
 }
-
-const GoBackContainer = styled.div`
-  margin-inline: 25px;
-  margin-top: 50px;
-  span {
-    cursor: pointer;
-  }
-  @media (min-width: 1100px) {
-    width: 1100px;
-    margin: auto;
-    padding-top: 50px;
-  }
-`;
-
-const MainContainer = styled.div`
-  @media (min-width: 1100px) {
-    height: 1100px;
-  }
-`;
-
-const GlobalStyle = createGlobalStyle`
-    #root {
-        background-color: #fafafa;
-    }
-`;
-
-const EMoneyContainer = styled.div`
-  @media (min-width: 765px) {
-    display: flex;
-    div {
-      width: 100%;
-      margin-right: 15px;
-    }
-    .emoney-pin-container {
-      margin: 0;
-    }
-  }
-`;
-
-const PaymentDetailsLabel = styled.label`
-  margin: 0;
-  font-size: 14px;
-  margin-left: 17px;
-  font-weight: 700;
-  width: 100%;
-  cursor: pointer;
-`;
-
-const CashOnDelivery = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 40px;
-`;
-
-const Label = styled.label`
-  font-weight: 700;
-  font-size: 12px;
-  cursor: pointer;
-`;
-
-const Error = styled.p`
-  margin: 0;
-  font-size: 12px;
-  color: #cd2c2c;
-  font-weight: 500;
-`;
-
-const PaymentMethodContainer = styled.div`
-  width: 50%;
-  @media (max-width: 765px) {
-    width: 100%;
-  }
-`;
-
-const PaymentMethod = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  border: 1px solid #cfcfcf;
-  padding: 15px;
-  border-radius: 8px;
-  margin-top: 5px;
-  &:hover {
-    border: 1px solid #d87d4a;
-  }
-`;
-
-const RadioInput = styled.input`
-  border: 1px solid #cfcfcf;
-  padding: 15px;
-  border-radius: 8px;
-  width: 18px;
-  height: 18px;
-  margin: 0;
-  box-sizing: border-box;
-  accent-color: #d87d4a;
-  cursor: pointer;
-`;
-
-const Input = styled.input`
-  border: 1px solid #cfcfcf;
-  padding: 15px;
-  border-radius: 8px;
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: 5px;
-  outline: none;
-  &:focus {
-    border: 1px solid #d87d4a;
-  }
-`;
-
-const BillingDetailsContainer = styled.div`
-  width: 100%;
-`;
-
-const BillingDetails = styled.div`
-  @media (min-width: 765px) {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px;
-    div {
-      margin: 0 !important;
-    }
-  }
-`;
-
-const ShippingInfo = styled.div`
-  @media (min-width: 765px) {
-    margin-top: 25px;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px;
-    div {
-      margin: 0 !important;
-    }
-  }
-`;
-
-const ShippingInfoContainer = styled.div`
-  width: 100%;
-  margin-block: 35px;
-`;
-
-const PaymentDetails = styled.div`
-  @media (min-width: 765px) {
-    display: flex;
-    justify-content: space-between;
-  }
-`;
-
-const PaymentDetailsContainer = styled.div`
-  width: 100%;
-  margin-top: 35px;
-`;
-
-const CheckoutContainer = styled.form`
-  padding-inline: 25px;
-  background-color: white;
-  border-radius: 8px;
-  margin-block: 40px;
-  padding-bottom: 30px;
-  @media (min-width: 1100px) {
-    width: 65%;
-    margin: 0;
-    margin-top: 50px;
-    height: 100%;
-  }
-`;
-
-export const Products = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-`;
-
-const Container = styled.div`
-  margin-inline: 25px;
-  @media (min-width: 1100px) {
-    width: 1100px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-  }
-`;
