@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { Button } from "./Headphones";
-import { CartProductData } from "../interfaces/Product";
-import { CartContainerProps } from "../interfaces/CartContainerProps";
+import { CartProductData } from "../types/Product";
+import { CartContainerProps } from "../types/CartContainerProps";
 
 export default function CartContainer(props: CartContainerProps) {
   const { cartProducts, setCartProducts, totalPrice, hideBackground } = props;
