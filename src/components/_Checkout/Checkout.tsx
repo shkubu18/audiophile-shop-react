@@ -7,8 +7,6 @@ import { Background } from "../_Header/Header";
 import { CheckoutProps } from "../../types/CheckoutProps";
 import Order from "./Order";
 import Summary from "./Summary";
-import { GoBackContainer } from "../Product";
-import { Container } from "../ViewProducts";
 import {
   Input,
   Error,
@@ -28,6 +26,8 @@ import {
   EMoneyContainer,
   CashOnDelivery,
   GlobalStyle,
+  Container,
+  GoBackContainer,
 } from "./checkout_styles";
 
 export default function Checkout(props: CheckoutProps) {
