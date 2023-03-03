@@ -2,10 +2,10 @@ import { useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { useForm } from "react-hook-form";
 import { SubmitHandler } from "react-hook-form/dist/types";
-import { Inputs } from "../types/CheckoutInputs";
-import CheckoutImg from "../assets/checkout/icon-cash-on-delivery.svg";
-import { Background } from "./Header";
-import { CheckoutProps } from "../types/CheckoutProps";
+import { Inputs } from "../../types/CheckoutInputs";
+import CheckoutImg from "../../assets/checkout/icon-cash-on-delivery.svg";
+import { Background } from "../Header";
+import { CheckoutProps } from "../../types/CheckoutProps";
 import Order from "./Order";
 import Summary from "./Summary";
 

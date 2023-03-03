@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { SummaryProps } from "../types/SummaryProps";
-import { Price, ProductName } from "./CartContainer";
+import { SummaryProps } from "../../types/SummaryProps";
+import { Price, ProductName } from "../CartContainer";
 import { Products } from "./Checkout";
-import { Button } from "./Headphones";
+import { Button } from "../Headphones";
 
 export default function Summary(props: SummaryProps) {
   const { cartProducts, totalPrice, shippingPrice } = props;
