@@ -4,7 +4,7 @@ import { Products } from "./Checkout";
 import { Price, ProductName } from "./CartContainer";
 import { Link } from "react-router-dom";
 import { Button } from "./Headphones";
-import { OrderProps } from "../interfaces/OrderProps";
+import { OrderProps } from "../types/OrderProps";
 
 export default function Order(props: OrderProps) {
   const { cartProducts, totalPrice, shippingPrice, setCartProducts } = props;

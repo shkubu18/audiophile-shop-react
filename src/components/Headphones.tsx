@@ -3,7 +3,7 @@ import { headphonesData } from "../data/headphones-data";
 import ViewProducts from "./ViewProducts";
 import HomeAbout from "./HomeAbout";
 import { Link } from "react-router-dom";
-import { MenuBarInfo } from "../interfaces/MenuBarInfo";
+import { MenuBarInfo } from "../types/MenuBarInfo";
 
 export default function Headphones(props: MenuBarInfo) {
   const { isMenuOpen, setIsMenuOpen } = props;

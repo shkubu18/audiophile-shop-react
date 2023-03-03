@@ -3,7 +3,7 @@ import { IoIosArrowForward as ForwardArrow } from "react-icons/io";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { MenuBarInfo } from "../interfaces/MenuBarInfo";
+import { MenuBarInfo } from "../types/MenuBarInfo";
 import { useState } from "react";
 
 export default function ViewProducts(props: MenuBarInfo) {

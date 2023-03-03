@@ -3,7 +3,7 @@ import { speakersData } from "../data/speakers-data";
 import ViewProducts from "./ViewProducts";
 import HomeAbout from "./HomeAbout";
 import { Link } from "react-router-dom";
-import { MenuBarInfo } from "../interfaces/MenuBarInfo";
+import { MenuBarInfo } from "../types/MenuBarInfo";
 import {
   HeaderH1,
   Description,

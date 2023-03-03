@@ -5,7 +5,7 @@ import HomeIMG2 from "../assets/home/image-hero.jpg";
 import HomeAbout from "./HomeAbout";
 import HomeProductCards from "./HomeProductCards";
 import ViewProducts from "./ViewProducts";
-import { MenuBarInfo } from "../interfaces/MenuBarInfo";
+import { MenuBarInfo } from "../types/MenuBarInfo";
 
 export default function Home(props: MenuBarInfo) {
   const { isMenuOpen, setIsMenuOpen } = props;

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { allProduct } from "../data/all-product";
 import { Button } from "./Headphones";
 import { Link } from "react-router-dom";
-import { SuggestProductsProps } from "../interfaces/SuggestProductsProps";
+import { SuggestProductsProps } from "../types/SuggestProductsProps";
 
 export default function SuggestProducts(props: SuggestProductsProps) {
   const [suggestProducts, setSuggestProducts] = useState<

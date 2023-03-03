@@ -4,10 +4,10 @@ import { Price, ProductName } from "./CartContainer";
 import { Button } from "./Headphones";
 import { useForm } from "react-hook-form";
 import { SubmitHandler } from "react-hook-form/dist/types";
-import { Inputs } from "../interfaces/CheckoutInputs";
+import { Inputs } from "../types/CheckoutInputs";
 import CheckoutImg from "../assets/checkout/icon-cash-on-delivery.svg";
 import { Background } from "./Header";
-import { CheckoutProps } from "../interfaces/CheckoutProps";
+import { CheckoutProps } from "../types/CheckoutProps";
 import Order from "./Order";
 
 export default function Checkout(props: CheckoutProps) {

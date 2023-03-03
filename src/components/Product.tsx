@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { ProductProps } from "../interfaces/ProductProps";
+import { ProductProps } from "../types/ProductProps";
 import { Name } from "./Headphones";
 import { Description } from "./Headphones";
 import { Button } from "./Headphones";

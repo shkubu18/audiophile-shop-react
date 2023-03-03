@@ -6,9 +6,9 @@ import Logo from "../assets/logo.svg";
 import CartIcon from "../assets/cart/icon-cart.svg";
 import CartIconBlack from "../assets/cart/icon-cart-black.svg";
 import ViewProducts from "./ViewProducts";
-import { HeaderProps } from "../interfaces/HeaderProps";
+import { HeaderProps } from "../types/HeaderProps";
 import { NavLink } from "react-router-dom";
-import { CartProductData } from "../interfaces/Product";
+import { CartProductData } from "../types/Product";
 import CartContainer from "./CartContainer";
 
 export default function Header(props: HeaderProps) {
