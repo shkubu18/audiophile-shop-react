@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./ScrollToTop";
 import Product from "./components/Product";
 import Header from "./components/Header";
-import Checkout from "./components/Checkout";
+import Checkout from "./components/_Checkout/Checkout";
 import { CartProductData, ProductData } from "./types/Product";
 import ErrorHint from "./components/ErrorHint";
 
