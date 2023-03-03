@@ -6,6 +6,7 @@ import { Button } from "./Headphones";
 
 export default function Summary(props: SummaryProps) {
   const { cartProducts, totalPrice, shippingPrice } = props;
+
   return (
     <>
       {cartProducts.length > 0 ? (
