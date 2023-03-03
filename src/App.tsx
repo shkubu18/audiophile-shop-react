@@ -10,7 +10,7 @@ import ScrollToTop from "./ScrollToTop";
 import Product from "./components/Product";
 import Header from "./components/Header";
 import Checkout from "./components/Checkout";
-import { CartProductData, ProductData } from "./interfaces/Product";
+import { CartProductData, ProductData } from "./types/Product";
 import ErrorHint from "./components/ErrorHint";
 
 export default function App() {
