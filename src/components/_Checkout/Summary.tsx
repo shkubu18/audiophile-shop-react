@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { SummaryProps } from "../../types/SummaryProps";
 import { Price, ProductName } from "../_Header/CartContainer";
-import { Products } from "./Checkout";
+import { Products } from "./checkout_styles";
 import { Button } from "../Headphones";
 
 export default function Summary(props: SummaryProps) {
