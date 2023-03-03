@@ -28,7 +28,7 @@ import yx1_IMG2 from "../assets/earphones/yx1-images.jpg";
 import yx1_IMG3 from "../assets/earphones/yx1-images1.jpg";
 import yx1_IMG4 from "../assets/earphones/yx1-images2.jpg";
 import yx1_IMG5 from "../assets/earphones/yx1-tablet.jpg";
-import { ProductData } from "../interfaces/Product";
+import { ProductData } from "../types/Product";
 
 export interface ProductDetailInfo {
   xx99mark2: ProductData[];
