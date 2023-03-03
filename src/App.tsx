@@ -8,7 +8,7 @@ import Earphones from "./components/Earphones";
 import Footer from "./components/Footer";
 import ScrollToTop from "./ScrollToTop";
 import Product from "./components/Product";
-import Header from "./components/Header";
+import Header from "./components/_Header/Header";
 import Checkout from "./components/_Checkout/Checkout";
 import { CartProductData, ProductData } from "./types/Product";
 import ErrorHint from "./components/ErrorHint";
