@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { createGlobalStyle } from "styled-components";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Headphones from "./components/Headphones";
 import Speakers from "./components/Speakers";
@@ -97,7 +97,7 @@ export default function App() {
   };
 
   return (
-    <BrowserRouter>
+    <Router>
       <ScrollToTop />
       <GlobalStyles />
       <Header
@@ -205,7 +205,7 @@ export default function App() {
         <Route path="*" element={<ErrorHint />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </Router>
   );
 }
 
