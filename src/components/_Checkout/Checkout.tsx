@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { SubmitHandler } from "react-hook-form/dist/types";
 import { Inputs } from "../../types/CheckoutInputs";
 import CheckoutImg from "../../assets/checkout/icon-cash-on-delivery.svg";
-import { Background } from "../Header";
+import { Background } from "../_Header/Header";
 import { CheckoutProps } from "../../types/CheckoutProps";
 import Order from "./Order";
 import Summary from "./Summary";

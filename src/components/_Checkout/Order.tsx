@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import OrderConfirmationImg from "../../assets/checkout/icon-order-confirmation.svg";
 import { Products } from "./Checkout";
-import { Price, ProductName } from "../CartContainer";
+import { Price, ProductName } from "../_Header/CartContainer";
 import { Link } from "react-router-dom";
 import { Button } from "../Headphones";
 import { OrderProps } from "../../types/OrderProps";

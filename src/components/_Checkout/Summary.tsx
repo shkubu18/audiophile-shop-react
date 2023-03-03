@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { SummaryProps } from "../../types/SummaryProps";
-import { Price, ProductName } from "../CartContainer";
+import { Price, ProductName } from "../_Header/CartContainer";
 import { Products } from "./Checkout";
 import { Button } from "../Headphones";
 

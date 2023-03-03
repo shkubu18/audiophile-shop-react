@@ -5,10 +5,10 @@ import { HiXMark } from "react-icons/hi2";
 import Logo from "../assets/logo.svg";
 import CartIcon from "../assets/cart/icon-cart.svg";
 import CartIconBlack from "../assets/cart/icon-cart-black.svg";
-import ViewProducts from "./ViewProducts";
-import { HeaderProps } from "../types/HeaderProps";
+import ViewProducts from "../ViewProducts";
+import { HeaderProps } from "../../types/HeaderProps";
 import { NavLink } from "react-router-dom";
-import { CartProductData } from "../types/Product";
+import { CartProductData } from "../../types/Product";
 import CartContainer from "./CartContainer";
 
 export default function Header(props: HeaderProps) {
