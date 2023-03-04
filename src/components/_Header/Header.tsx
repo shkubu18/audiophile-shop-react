@@ -47,6 +47,7 @@ export default function Header(props: HeaderProps) {
           (product: CartProductData) => product.qty > 0
         );
         setCartProducts(filteredProducts);
+        localStorage.setItem("cart_products", JSON.stringify(filteredProducts));
       }
     });
   }, [totalQuantity]);

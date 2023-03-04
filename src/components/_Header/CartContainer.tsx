@@ -13,6 +13,11 @@ export default function CartContainer(props: CartContainerProps) {
         product.id === id ? { ...product, qty: product.qty + 1 } : product
       )
     );
+
+    const updatedCartProducts = cartProducts.map((product: CartProductData) =>
+      product.id === id ? { ...product, qty: product.qty + 1 } : product
+    );
+    localStorage.setItem("cart_products", JSON.stringify(updatedCartProducts));
   };
 
   const handleDecreaseQty = (id: number) => {
@@ -25,10 +30,16 @@ export default function CartContainer(props: CartContainerProps) {
         }
       })
     );
+
+    const updatedCartProducts = cartProducts.map((product: CartProductData) =>
+      product.id === id ? { ...product, qty: product.qty - 1 } : product
+    );
+    localStorage.setItem("cart_products", JSON.stringify(updatedCartProducts));
   };
 
   const deleteAllProduct = () => {
     setCartProducts([]);
+    localStorage.removeItem("cart_products");
   };
 
   return (

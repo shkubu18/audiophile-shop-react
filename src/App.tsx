@@ -48,6 +48,11 @@ export default function App() {
       if (existingProduct) {
         existingProduct.qty = existingProduct.qty + itemCount;
         setCartProducts([...cartProducts]);
+
+        localStorage.setItem(
+          "cart_products",
+          JSON.stringify([...cartProducts])
+        );
       } else {
         setCartProducts([
           ...cartProducts,
@@ -59,6 +64,20 @@ export default function App() {
             qty: itemCount,
           },
         ]);
+
+        localStorage.setItem(
+          "cart_products",
+          JSON.stringify([
+            ...cartProducts,
+            {
+              id: data[0].id,
+              name: data[0].name,
+              price: data[0].price,
+              img: data[0].img1,
+              qty: itemCount,
+            },
+          ])
+        );
       }
     } else {
       setCartProducts([
@@ -71,6 +90,20 @@ export default function App() {
           qty: itemCount,
         },
       ]);
+
+      localStorage.setItem(
+        "cart_products",
+        JSON.stringify([
+          ...cartProducts,
+          {
+            id: data[0].id,
+            name: data[0].name,
+            price: data[0].price,
+            img: data[0].img1,
+            qty: itemCount,
+          },
+        ])
+      );
     }
 
     if (cartItems !== 0) {
@@ -95,6 +128,22 @@ export default function App() {
   const handleClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    const storedCartProducts = localStorage.getItem("cart_products");
+
+    if (storedCartProducts) {
+      setCartProducts(JSON.parse(storedCartProducts));
+    }
+  }, []);
+
+  useEffect(() => {
+    const storedCartProducts = localStorage.getItem("cart_products");
+
+    if (storedCartProducts?.length === 2) {
+      localStorage.removeItem("cart_products");
+    }
+  }, [cartProducts]);
 
   return (
     <Router>
