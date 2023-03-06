@@ -11,8 +11,11 @@ import {
   ProductDetailInfo,
   productsDetailInfo,
 } from "../data/products-detail-info";
+import { useLocation } from "react-router-dom";
 
 export default function Product(props: ProductProps) {
+  const { pathname } = useLocation();
+
   const [isUrlChanged, setIsUrlChanged] = useState<boolean>(false);
   const [isProductExists, setIsProductExists] = useState<boolean>(true);
 
@@ -34,7 +37,7 @@ export default function Product(props: ProductProps) {
   };
 
   useEffect(() => {
-    let requestedProduct = window.location.pathname.split("/").pop();
+    let requestedProduct = pathname.split("/").pop();
     if (requestedProduct) {
       const product = productsDetailInfo.find(
         (product: ProductDetailInfo[] | any) =>
